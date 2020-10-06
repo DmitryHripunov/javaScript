@@ -43,14 +43,15 @@ const createEl = (tagName, content, attrObj) => {
 const httpRequest = (url, searchInput) => {
   fetch(url)
     .then((response) => {
-      if (response.status !== SUCCESS_RESPONSE) {
+      if (!response.ok) {
         alert(
           'Произошла ошибка при получении ответа от сервера:\n\n' +
             response.message
         );
         return
+      } else {
+        return response.json(); // парсим из JSON-строки в JavaScript-объект
       }
-     return response.json(); // парсим из JSON-строки в JavaScript-объект
     })
 
     .then((data) => {
