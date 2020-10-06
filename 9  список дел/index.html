@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список дел</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/entryField.css" />
+    <link rel="stylesheet" type="text/css" href="css/listCase.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <main class="clearfix">
+      <h1 class="visually-hidden">Создать список дел</h1>
+
+      <section class="entry-field">
+        <form class="filling-in-date filling-in-date-js" action="#">
+          <h2 class="headline">Добавить новое дело</h2>
+
+          <div class="fieldset-container">
+            <div class="case-name">
+              <label class="label-appearance"
+                >* Новое дело
+                <input
+                  class="case case-js"
+                  type="text"
+                  name="title"
+                  maxlength="40"
+                  placeholder="Не более 40 символов"
+                  required
+                />
+              </label>
+            </div>
+
+            <button
+              class="add-case js-add-case"
+              type="submit"
+              aria-label="добавить новое дело"
+            >
+              Добавить дело
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="list-case js-list-case">
+        <h2 class="headline js-headline">Список дел</h2>
+
+        <p class="list-empty list-empty-js">Список пуст...</p>
+
+        <ol class="ordered-list ordered-list-js"></ol>
+      </section>
+    </main>
+  </body>
+</html>
+

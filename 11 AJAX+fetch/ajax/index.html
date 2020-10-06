@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>web API</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="js/index.js" defer></script>
+</head>
+<body >
+  <main>
+    <div class="content">
+      
+      <form id="search_request" class="search" method="GET">
+        <div class="search_form">
+          <label>Поиск персонажа:
+            <input type="search" class="person_search" id="person_search_input">
+          </label>
+          <input id="search_request_btn" class="button" type="submit" value="Найти">
+        </div>
+
+        <ul class="search_result search_result-js">
+        </ul>
+      </form>
+
+      <ul class="person_data" >
+        <li>Имя: 
+          <span class="name" id="name"></span>
+        </li>
+        <li>Рост: 
+          <span class="height" id="height"></span>
+        </li>
+        <li>Вес:
+          <span class="mass" id="mass"></span>
+        </li>
+        <li>Год рождения: 
+          <span class="birth_year" id="birth_year"></span>
+        </li>
+        <li>В скольки фильмах появлялся: 
+          <span class="films_count" id="films_count"></span>
+        </li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
